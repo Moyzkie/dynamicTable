@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="1" id="table" style="text-align: center;"> 
+
+</table>
+<script>
+    const myFavoriteSongs = [
+        {
+            Title: "Struck",
+            Artist: "Darren Espanto",
+            TrackDuration: "04:30", 
+            Composer: "Darren Espanto",
+            ReleaseDate: "2014"
+            
+        },
+        {
+            Title: "Mapa",
+            Artist: "SB19",
+            TrackDuration: "04:51", 
+            Composer: "John Paulo Nase",
+            ReleaseDate: "2021"
+        },
+        {
+            Title: "otso-otso",
+            Artist: "bayani agbayani",
+            TrackDuration: "04:51", 
+            Composer: "diko alam",
+            ReleaseDate: "2000"
+        }
+        
+    ];
+    var table ='<th>Title</th>';
+    table+= ' <th>Artist</th>';
+    table+= ' <th>Track Duration</th>';
+    table+= ' <th>Composer</th>';
+    table+= ' <th>Releas Date</th>';
+    
+    for( var row = 0 ; row < myFavoriteSongs.length ;row++){
+        
+        table += '<tr>';
+        
+           table += '<td>' +  myFavoriteSongs[row].Title + '</td>';
+           table += '<td>' +  myFavoriteSongs[row].Artist + '</td>';
+           table += '<td>' +  myFavoriteSongs[row].TrackDuration + '</td>';
+           table += '<td>' +  myFavoriteSongs[row].Composer + '</td>';
+           table += '<td>' +  myFavoriteSongs[row].ReleaseDate + '</td>';
+           
+        table +='<tr>';
+    }
+     document.getElementById("table").innerHTML = table;
+</script>
+</body>
+</html>
